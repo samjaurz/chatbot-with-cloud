@@ -10,7 +10,7 @@ function ChatInput({ onSend }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex p-2 border-t">
+    <form onSubmit={handleSubmit} className="flex p-10 border-t">
       <input
         className="flex-1 p-2 border rounded"
         value={input}
