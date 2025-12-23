@@ -6,6 +6,7 @@ resource "aws_security_group" "this" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  #TODO : cidr_blocks = [evaluate how many port are needed 0.0.0.0/0 or restrict to specific ip ranges]
   ingress {
     from_port   = 8000
     to_port     = 8000

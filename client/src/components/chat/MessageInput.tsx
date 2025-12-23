@@ -1,9 +1,14 @@
 import { useState } from "react";
 
-function ChatInput({ onSend }) {
+
+type ChatInputProps = {
+  onSend: (message: string) => void;
+};
+
+function ChatInput({ onSend }: ChatInputProps) {
   const [input, setInput] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSend(input);
     setInput("");

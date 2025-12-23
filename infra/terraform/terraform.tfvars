@@ -9,7 +9,7 @@ user_data = <<EOF
 #!/bin/bash
 yum update -y
 
-# Base tools
+# Base tools`
 yum install -y git docker python3 python3-pip
 
 # Docker
@@ -19,7 +19,7 @@ usermod -aG docker ec2-user
 
 # Python tooling
 pip3 install --upgrade pip
-pip3 install poetry boto3 requests
+pip3 install uv requests
 EOF
 
 ############################################
