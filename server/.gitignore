@@ -7,3 +7,7 @@ wheels/
 .idea/
 .venv/
 .DS_Store
+versions/*
+
+.env
+:memory
