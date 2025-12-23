@@ -22,5 +22,12 @@ resource "aws_instance" "this" {
   key_name = var.ssh_key_name
   user_data              = var.user_data
   associate_public_ip_address = true
+
+  root_block_device {
+    volume_size = 30
+    volume_type = "gp3"
+    delete_on_termination = true
+  }
+
   tags = { Name = var.instance_name }
 }
